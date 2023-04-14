@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Proyecto Final de Robotica Industrial">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- font icons -->
+    <link rel="stylesheet" href="../static/assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="../static/assets/css/rubic.css">
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <nav id="scrollspy" class="navbar page-navbar navbar-dark navbar-expand-md fixed-top" data-spy="affix"
+        data-offset-top="20">
+        <div class="container">
+            <a class="navbar-brand" href="#"><span class="text-light">SDLS</span></a>
+            
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#integrantes">Integrantes</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-dark shadow-none ml-md-4" href="#sdls">SDLS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="header d-flex justify-content-center" id="inicio">
+        <div class="container">
+            <div class="row h-100 align-items-center">
+                <div class="col-md-7">
+                    <div class="header-content">
+                        <h3 class="header-title"><strong class="text-light">Sistema Detector de Lenguaje de
+                                Señas</strong></h3>
+                        <h4 class="header-subtitle"> </h4>
+                        <p>Desde los años 80 se ha desarrollado un lenguaje de señas pragmático para que las personas 
+                            sordas puedan comunicarse de manera visual, el cual ha sido estandarizado en varios países. Sin embargo, en algunos lugares,
+                             como en el país del autor, este lenguaje no es muy conocido por las personas oyentes, lo que ha llevado a la creación de SDLS, 
+                             un sistema que utiliza inteligencia artificial para reconocer los signos del lenguaje de señas y traducirlos a texto plano para 
+                             facilitar la comprensión para las personas oyentes y ayudar a que puedan aprender el lenguaje. En el futuro, el objetivo es implementar 
+                             guantes que reconozcan las señas y las traduzcan a voz.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="social-wrapper" id="integrantes">
+
+    </div>
+    <section class="section">
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-lg-8">
+                    <div class="tabs-container">
+                        <ul class="nav tab-nav" id="pills-tab">
+                            <li class="item">
+                                <a class="link active" id="pills-home-tab" data-toggle="pill" href="#pills-home"
+                                    aria-selected="true">Integrantes</a>
+                            </li>
+                            <li class="item">
+                                <a class="link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                                    aria-selected="false">Catedratico</a>
+                            </li>
+
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="pills-home">
+                                <br>
+                                <h3 class="title"><strong> Delbert Alexander Lira Tinoco: 201810020087</strong></h3>
+                                <br>
+                                <h3 class="title"><strong>Esteban Ariel Cerrato Pavón: 201920060087</strong></h3>
+                                <br>
+                                <h3 class="title"><strong>Wilmer Alejandro Bordas Bernárdez: 201910050084</strong></h3>
+                                <h3 class="title"><strong>Zandy Guadalupe Amaya Cedillo: 201820060219</strong></h3>
+
+
+                            </div>
+                            <div class="tab-pane fade" id="pills-profile">
+                                <br>
+                                <h3 class="title"><strong>CESAR AUGUSTO NUÑEZ AGUILAR</strong></h3>
+                                <div class="col-lg-4 d-none d-lg-block align-self-center">
+                                    <img src="../static/assets/imgs/foto_ingeniero.jpg" alt="" class="w-100 tower">
+                                </div>
+                            </div>
+                     
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block align-self-center">
+                    <img src="../static/assets/imgs/logo-sdls.svg" alt="" class="w-100 tower">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="sdls">
+
+        <div class="register">
+
+            <div class="container-fluid">
+
+                <div class="row row-eq-height">
+                    <div class="col-lg-6 nopadding">
+                        <div class="register_section d-flex flex-column align-items-center justify-content-center">
+                            <div class="register_content text-center">
+                                <img id="video" src="{{ url_for('video_feed') }}">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 nopadding">
+                        <div class="search_section d-flex flex-column align-items-center justify-content-right">
+                           
+                            <div class="search_content text-center">
+                                <h1 class="search_title">Texto interpretado</h1>
+                                <div style="background-color: #F5F5F5; width: 500px; height: 420px;">
+                                    <div id="console">
+                                        <textarea id="mi-parrafo" readonly
+                                            style="font-size: 30; color: black; font-weight: bold; width: 500px; height: 420px;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section>
+
+
+    </section>
+
+    <footer class="footer py-4 bg-dark text-light">
+        <div class="container text-center">
+            <p class="mb-4 small">Grupo #2 </p>
+            <p class="mb-4 small">Ingenieria en Computacion</p>
+            <p class="mb-4 small">Robotica Industrial</p>
+
+        </div>
+    </footer>
+
+    <!-- core  -->
+    <script src="../static/assets/vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="../static/assets/vendors/bootstrap/bootstrap.bundle.js"></script>
+    <!-- bootstrap 3 affix -->
+    <script src="../static/assets/vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Rubic js -->
+    <script src="../static/assets/js/rubic.js"></script>
+
+
+
+
+    <script>
+        var video = document.getElementById("video");
+
+        function toggleVideo() {
+            if (video.style.display === "none") {
+                video.style.display = "block";
+                var button = document.getElementById("toggle-cam-btn");
+                button.innerHTML = "Desactivar Camara";
+            } else {
+                video.style.display = "none";
+                alert("El video ha sido desactivado.");
+                var button = document.getElementById("toggle-cam-btn");
+                button.innerHTML = "Activar Camara";
+            }
+        }
+
+        //AQUI
+        var texto_anterior = ''
+        function actualizarParrafo() {
+            // obtener el elemento <p> por su ID
+            var parrafo = document.getElementById('mi-parrafo');
+            // hacer una solicitud AJAX a la ruta /actualizar_parrafo
+            fetch('/actualizar_parrafo')
+                .then(function (response) {
+                    return response.text();
+                })
+                .then(function (texto) {
+                    // actualizar el contenido del elemento <p>
+                    if (texto != texto_anterior && texto != '') {
+                        texto_anterior = texto;
+                        parrafo.innerHTML += ' ' + texto;
+                    }
+                });
+        }
+        // hacer que la función actualizarParrafo() se ejecute cada segundo
+        setInterval(actualizarParrafo, 200);
+        //AQUI AQUI AQUI AQUI
+
+
+
+        var socket = io.connect('http://' + document.domain + ':' + location.port);
+
+        // Función para capturar la salida de la consola
+        function captureConsoleLog() {
+            var oldLog = console.log;
+
+            console.log = function (message) {
+                socket.emit('console', message);
+                oldLog.apply(console, arguments);
+            };
+        }
+
+        captureConsoleLog();
+
+        // Función para mostrar los datos de la consola en el cuadro de texto
+        socket.on('console', function (data) {
+            var consoleText = document.getElementById('console');
+            consoleText.innerHTML += data + '<br>'; // aquí se agrega el contenido al final del div
+            console.log(data); // también se puede imprimir en la consola del navegador para verificar
+        });
+    </script>
+
+</body>
+
+</html>
